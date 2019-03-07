@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-// Transformer export
-export { default as transformer } from './transform'
+// Default transformer export
+export { default, default as transformer } from './transform'
 
 /**
  * Code transformation that converts a ts-transformer-optchain call expression
