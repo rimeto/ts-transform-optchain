@@ -1,0 +1,53 @@
+{
+  "name": "ts-transform-optchain",
+  "version": "0.1.0",
+  "description": "A TypeScript custom transformer for Optional Chaining",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist src/__tests__/dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "ttsc -p src/__tests__ && jest; ret=$?; rm -rf src/__tests__/dist; exit $ret"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rimeto/ts-transform-optchain.git"
+  },
+  "keywords": [
+    "existential operator",
+    "null conditional operator",
+    "null propagation operator",
+    "optional chaining",
+    "safe navigation operator",
+    "typescript"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rimeto/ts-transform-optchain/issues"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "dependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^6.14.4",
+    "jest": "^24.1.0",
+    "ttypescript": "^1.5.6",
+    "typescript": "^3.3.3333"
+  },
+  "peerDependencies": {
+    "typescript": ">=2.8"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "rootDir": "./src/__tests__/dist",
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*-test)\\.js$"
+  }
+}
