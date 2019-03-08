@@ -19,7 +19,7 @@ For example, the code:
       : defaultValue;
 ```
 
-`ts-transform-optchain` is derived from the ES6 Proxy based [`ts-optchain`](https://github.com/rimeto/ts-optchain) library. The transformed code produced by `ts-transform-optchain` is supported in all JavaScript environments without a dependency on ES6 Proxy support (which `ts-optchain` requires). Moreover, the JavaScript code produced by `ts-transform-optchain` is significantly faster than the Proxy based `ts-optchain` (see [Benchmarks](#benchmarks)).
+`ts-transform-optchain` is inspired by the [`ts-optchain`](https://github.com/rimeto/ts-optchain) library. The transformed code produced by `ts-transform-optchain` is supported in all JavaScript environments *without* a dependency on ES6 Proxy (unlike `ts-optchain`). Moreover, the JavaScript code produced by `ts-transform-optchain` runs significantly faster than the Proxy based `ts-optchain` (see [Benchmarks](#benchmarks)).
 
 ## Installing
 
