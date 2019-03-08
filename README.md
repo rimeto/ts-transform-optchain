@@ -2,8 +2,6 @@
 
 The `ts-transform-optchain` library is a TypeScript custom transformer to enable optional chaining with default value support. `ts-transform-optchain` helps the developer write less verbose code while preserving TypeScript typings when traversing deep property structures. This library serves as an interim solution for Optional Chaining until JavaScript/TypeScript introduce support for equivalent functionality in a future release (see: [Related Resources](#related)).
 
-`ts-transform-optchain` is a derivative of the ES6 Proxy based [`ts-optchain`](https://github.com/rimeto/ts-optchain) library. Unlike its predecessor, the transformed code produced by `ts-transform-optchain` is supported in ALL JavaScript environments without worry for ES6 Proxy support.
-
 For example, the code:
 
 ```typescript
@@ -20,6 +18,8 @@ For example, the code:
       ? obj.propA.propB.propC
       : defaultValue;
 ```
+
+`ts-transform-optchain` is inspired by the [`ts-optchain`](https://github.com/rimeto/ts-optchain) library. The transformed code produced by `ts-transform-optchain` is supported in all JavaScript environments *without* a dependency on ES6 Proxy (unlike `ts-optchain`). Moreover, the JavaScript code produced by `ts-transform-optchain` runs significantly faster than the Proxy based `ts-optchain` (see [Benchmarks](#benchmarks)).
 
 ## Installing
 
@@ -225,6 +225,22 @@ const result = oc(thing).getter(() => 'Default Getter')();
 ### Code-Completion
 
 `ts-transform-optchain` enables code-completion assistance in popular IDEs such as Visual Studio Code when writing tree-traversal code.
+
+## <a name="benchmarks"></a>Benchmarks
+
+Test case:
+
+```typescript
+oc(testData).a.b.c();
+```
+
+Results:
+
+||`ts-optchain`|`ts-transform-optchain`||
+|--|--:|--:|--:|
+|Chrome 72|`2,352,109 ops/s ±1.16%`|`628,693,809 ops/s ±0.44%`|`267x`|
+|Safari 12|`752,298 ops/s ±1.47%`|`1,760,808,177 ops/s ±0.93%`|`2,340x`|
+|Firefox 65|`272,155 ops/s ±4.78%`|`793,869,896 ops/s ±0.82%`|`2,916x`|
 
 ## <a name="related"></a>Related Resources
 
