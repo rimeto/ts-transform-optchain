@@ -238,9 +238,9 @@ Results:
 
 ||`ts-optchain`|`ts-transform-optchain`||
 |--|--:|--:|--:|
-|Chrome 72|2,352,109 ops/s ±1.16%|628,693,809 ops/s ±0.44%|267x|
-|Safari 12|752,298 ops/s ±1.47%|1,760,808,177 ops/s ±0.93%|2,340x|
-|Firefox 65|272,155 ops/s ±4.78%|793,869,896 ops/s ±0.82%|2,916x|
+|Chrome 72|`2,352,109 ops/s ±1.16%`|`628,693,809 ops/s ±0.44%`|`267x`|
+|Safari 12|`752,298 ops/s ±1.47%`|`1,760,808,177 ops/s ±0.93%`|`2,340x`|
+|Firefox 65|`272,155 ops/s ±4.78%`|`793,869,896 ops/s ±0.82%`|`2,916x`|
 
 ## <a name="related"></a>Related Resources
 
