@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "alwaysStrict": true,
-    "declaration": true,
     "lib": ["es2015"],
     "module": "commonjs",
     "noEmitOnError": true,
@@ -14,5 +13,5 @@
     "target": "es5"
   },
   "exclude": ["dist", "node_modules", "**/__tests__/**"],
-  "include": ["src"]
+  "include": ["src", "index.d.ts"]
 }
