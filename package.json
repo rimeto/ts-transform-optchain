@@ -1,9 +1,9 @@
 {
   "name": "ts-transform-optchain",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "description": "A TypeScript custom transformer for Optional Chaining",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist src/__tests__/dist",

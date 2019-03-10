@@ -5,7 +5,6 @@ The `ts-transform-optchain` library is a TypeScript custom transformer to enable
 For example, the code:
 
 ```typescript
-  import { oc } from 'ts-transform-optchain';
   const obj: T = { /* ... */ };
   const value = oc(obj).propA.propB.propC(defaultValue);
 ```
@@ -35,8 +34,6 @@ $ npm i --save ts-transform-optchain
 ## Example Usage
 
 ```typescript
-import { oc } from 'ts-transform-optchain';
-
 interface I {
   a?: string;
   b?: {
@@ -169,8 +166,6 @@ However, when using tools like `lodash` the developer loses the benefits of:
 Using the `ts-transform-optchain` utility, `getHomeStreet` can be concisely written as:
 
 ```typescript
-import { oc } from 'ts-transform-optchain';
-
 function getHomeStreet(user: IUser, defaultValue?: string) {
   return oc(user).home.address.street(defaultValue);
 }

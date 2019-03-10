@@ -1,10 +1,9 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "declaration": false,
     "outDir": "dist",
-    "plugins": [{ "transform": "../transform.ts" }]
+    "plugins": [{ "transform": "../transform.ts" }],
   },
   "exclude": [],
-  "include": ["**/*.ts"],
+  "include": ["../../index.d.ts", "**/*.ts"],
 }

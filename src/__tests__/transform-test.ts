@@ -5,8 +5,6 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { oc } from '../index';
-
 describe('ts-optchain', () => {
   it('sanity checks', () => {
     interface X {
