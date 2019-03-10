@@ -13,5 +13,5 @@
     "target": "es5"
   },
   "exclude": ["dist", "node_modules", "**/__tests__/**"],
-  "include": ["src", "index.d.ts"]
+  "include": ["index.d.ts", "src"]
 }
