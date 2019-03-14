@@ -26,6 +26,12 @@ For example, the code:
 $ npm i --save ts-transform-optchain
 ```
 
+Add the following triple-slash directive to `index.d.ts` to import the declaration for pseudo-function `oc`:
+
+```typescript
+/// <reference types="ts-transform-optchain" />
+```
+
 ### Requirements
 
 - NodeJS >= 6
@@ -34,6 +40,9 @@ $ npm i --save ts-transform-optchain
 ## Example Usage
 
 ```typescript
+// Import declaration for pseudo-function `oc`
+/// <reference types="ts-transform-optchain" />
+
 interface I {
   a?: string;
   b?: {
@@ -96,7 +105,7 @@ oc(x).e.g(() => 'Yo Yo')(); // 'Yo Yo'
 ((x != null && x.e != null && x.e.g != null) ? x.e.g : (() => 'Yo Yo'))();
 ```
 
-## How to Use the Transformer
+## How to Configure the Transformer
 
 ### ttypescript
 
