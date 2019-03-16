@@ -61,6 +61,7 @@ describe('ts-optchain', () => {
     };
 
     expect(oc(x).a()).toEqual(x.a);
+    expect(oc(x).a(undefined)).toEqual(x.a);
     expect(oc(x).b.d()).toEqual(x.b && x.b.d);
     expect(oc(x).c[0].u.v()).toEqual(x.c && x.c[0] && x.c[0].u && (x as any).c[0].u.v);
     expect(oc(x).c[100].u.v()).toEqual(x.c && x.c[100] && x.c[100].u && (x as any).c[100].u.v);
