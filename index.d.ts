@@ -18,7 +18,7 @@ interface TSOCDataAccessor<T> {
    * Data accessor without a default value. If no data exists,
    * `undefined` is returned.
    */
-  (): Defined<T> | undefined;
+  (noDefaultValue?: undefined): Defined<T> | undefined;
 
   /**
    * Data accessor with default value.
