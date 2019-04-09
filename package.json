@@ -1,7 +1,7 @@
 {
   "name": "ts-transform-optchain",
-  "version": "0.1.6",
-  "description": "A TypeScript custom transformer for Optional Chaining",
+  "version": "0.1.7",
+  "description": "[DEPRECATED] A TypeScript custom transformer for Optional Chaining",
   "main": "./dist/index.js",
   "types": "./index.d.ts",
   "scripts": {
@@ -14,14 +14,6 @@
     "type": "git",
     "url": "git+https://github.com/rimeto/ts-transform-optchain.git"
   },
-  "keywords": [
-    "existential operator",
-    "null conditional operator",
-    "null propagation operator",
-    "optional chaining",
-    "safe navigation operator",
-    "typescript"
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rimeto/ts-transform-optchain/issues"
